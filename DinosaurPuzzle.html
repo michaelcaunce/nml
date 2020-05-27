@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Links this HTML file with CSS file imported. This allows the use of their icons in the footer. -->
+	<script src="scripts/puzzle.js"></script>
+	<script src="scripts/jquery.min.js"></script>
+	<title>Dinosaur Puzzle</title>
+</head>
+	<body>
+		<!-- Start of all Media elements inside the HTML page-->
+		<!-- Video for dinosaur animation. Currently set to hide in CSS.
+		 This is the animation displayed once the game has been completed. -->
+		<div class="videoContainer" id="myVideo">
+			<video autoplay>
+				<!-- Source file changed to empty. Actual file path will kick in once puzzle is complete.AC. -->
+				<source src="#" type="video/mp4">
+			</video>
+			<script>
+				$('#myVideo video').bind('ended', function(){
+					$(this).parent().fadeOut(3000);
+//					window.location = "http://www.liverpoolmuseums.org.uk/wml/visit/floor-plans/dinosaurs.aspx";   
+					
+					document.getElementById('thankyou').style.display = "block";
+				})
+			</script>
+		</div>
+		<!-- Audio for correct puzzle piece drop -->
+		<audio id="correct-sound" src="sounds/correct.wav" preload="auto">
+			Your browser does not support the <code>audio</code> element.
+		</audio>
+		<!-- Audio for wrong puzzle piece drop -->
+		<audio id="wrong-sound" src="sounds/buzz.wav" preload="auto">
+			Your browser does not support the <code>audio</code> element.
+		</audio>
+		<!-- Audio for end of game, song -->
+		<audio id="complete-roar" src="sounds/gameComplete.wav" preload="auto">
+			Your browser does not support the <code>audio</code> element.
+		</audio>
+		<!--End of Media-->
+		<div id="container1">
+			<!-- Top element in page. Simply returns the user back the liverpool museums-->
+			<div class="topreturn" id="topreturn">
+				<div class="row">
+					<ul class="return">
+						<li class="column large-12"><a href="http://www.liverpoolmuseums.org.uk/">Back to National Museums Liverpool</a></li>
+					</ul>
+				</div>
+			</div>
+		<!-- Second element containing two NML logs, both as individual links -->
+		<div class="banner" id="banner">
+			<div class="row">
+				<div class="NML column large-2"><a href="http://www.liverpoolmuseums.org.uk/"><img alt="National Museums Liverpool" src="images/logo-nml-white (1).png"></a></div>
+				<div class="WM column large-2"><a href="http://www.liverpoolmuseums.org.uk/wml/index.aspx"><img alt="National Museums Liverpool" src="images/logo-welcome.png"></a></div>
+				<p class="column large-5">Discover treasures from around the world, explore outer space and meet live creatures!</p>
+				<div class="column large-3">&nbsp;</div>
+			</div>
+		</div>
+	
+		<!--Start of the navigation, third page element-->
+		<div class="lowerNav" id="menu">
+			<div class="row">
+				<ul class="menu-links">
+					<li><a href="http://www.liverpoolmuseums.org.uk/wml/visit/index.aspx">Your visit |</a></li>
+					<li><a href="http://www.liverpoolmuseums.org.uk/wml/events/">What's on |</a></li>
+					<li><a href="http://www.liverpoolmuseums.org.uk/wml/things-to-see/">Things to see |</a></li>
+					<li><a href="http://www.liverpoolmuseums.org.uk/wml/collections/index.aspx">Collections |</a></li>
+					<li><a href="http://www.liverpoolmuseums.org.uk/wml/schools-groups/index.aspx">Schools and groups |</a></li>
+					<li><a href="http://www.liverpoolmuseums.org.uk/onlineshop/venues/wml.aspx">Shop |</a></li>
+					<li><a href="http://www.liverpoolmuseums.org.uk/wml/contact/index.aspx">Contact us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--Start of hidden elements->-->
+	<img id="bonesPic" src="images/dino copy.jpg">
+	<!--Hidden thank you message, displays once called by the JQuery script above-->
+	<div class="row" id="thanks">
+		<div id="thankyou" class="column large-12">
+			<h1>Thank You For Playing</h1>
+			<a href="DinosaurPuzzle.html" class="button large-3">Play Again</a>
+			<a href="http://www.liverpoolmuseums.org.uk/wml/index.aspx" class="button large-3">Return To World Museum</a>
+		</div>
+	</div>
+	<div id="container2">
+		<!-- Start of the actual puzzle board. 
+		<div class="row puzzle-container column large-12">
+			<!-- ID provided for JS -->
+			<div class="dinoboard" id="dinoboard">
+				<!-- Start of the puzzleboard. 32 represent the 32 pieces for the puzzle.
+				ID's provided to enable JS to identify whether the correct piece is in the correct place. -->
+				<div id="puzzlerow">
+				  <div dino="p1"></div>
+				  <div dino="p2"></div>
+				  <div dino="p3"></div>
+				  <div dino="p4"></div>
+				  <div dino="p5"></div>
+				  <div dino="p6"></div>
+				  <div dino="p7"></div>
+				  <div dino="p8"></div>
+				  <div dino="p9"></div>
+				  <div dino="p10"></div>
+				  <div dino="p11"></div>
+				  <div dino="p12"></div>
+				  <div dino="p13"></div>
+				  <div dino="p14"></div>
+				  <div dino="p15"></div>
+				  <div dino="p16"></div>
+				  <div dino="p17"></div>
+				  <div dino="p18"></div>
+				  <div dino="p19"></div>
+				  <div dino="p20"></div>
+				  <div dino="p21"></div>
+				  <div dino="p22"></div>
+				  <div dino="p23"></div>
+				  <div dino="p24"></div>
+				  <div dino="p25"></div>
+				  <div dino="p26"></div>
+				  <div dino="p27"></div>
+				  <div dino="p28"></div>
+				  <div dino="p29"></div>
+				  <div dino="p30"></div>
+				  <div dino="p31"></div>
+				  <div dino="p32"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Class factholder created to display various facts to this position on the page -->
+		<div class="factholder" id="factholder">
+			<div class="row">
+				<div class="column large-12" id="funfacts">
+					<h3>Did you know?</h3>
+				<div class="column large-12">
+					<p id="dinofact">Most Dinosaurs were herbivores, they had a diet consisting of different plant life, others were carnivores and either hunted for meat or scavenged for dead animals</p></div>
+				</div>
+			</div>
+		</div> 
+		<div id="space" class="row column large-12">&nbsp;</div>
+		<!-- Start of the housing of the 32 puzzle pieces. -->
+		<div class="dinosafeplace" id="dinosafeplace">
+			<!-- Broken down to four individual divs with their own ID's.
+			This allows each to have their own background colour. Can easily be removed if we want the colour
+			to remain the same as the body or the pieces all share the same colour. -->			
+			<div id="images1" class="row images column small-3 large-3">
+				<img src="images/Dino-Pieces_22.jpg" id="p22">
+				<img src="images/Dino-Pieces_02.jpg" id="p2">
+				<img src="images/Dino-Pieces_28.jpg" id="p28">
+				<img src="images/Dino-Pieces_04.jpg" id="p4">
+				<img src="images/Dino-Pieces_21.jpg" id="p21">
+				<img src="images/Dino-Pieces_30.jpg" id="p30">
+				<img src="images/Dino-Pieces_06.jpg" id="p6">
+				<img src="images/Dino-Pieces_07.jpg" id="p7">			
+			</div>
+			<div id="images2" class="row images column small-3 large-3">
+				<img src="images/Dino-Pieces_25.jpg" id="p25">
+				<img src="images/Dino-Pieces_09.jpg" id="p9">
+				<img src="images/Dino-Pieces_01.jpg" id="p1">
+				<img src="images/Dino-Pieces_10.jpg" id="p10">
+				<img src="images/Dino-Pieces_18.jpg" id="p18">
+				<img src="images/Dino-Pieces_12.jpg" id="p12">
+				<img src="images/Dino-Pieces_31.jpg" id="p31">
+				<img src="images/Dino-Pieces_14.jpg" id="p14">
+			</div>
+			<div id="images3" class="row images column small-3 large-3">
+				<img src="images/Dino-Pieces_20.jpg" id="p20">
+				<img src="images/Dino-Pieces_32.jpg" id="p32">
+				<img src="images/Dino-Pieces_17.jpg" id="p17">
+				<img src="images/Dino-Pieces_15.jpg" id="p15">
+				<img src="images/Dino-Pieces_19.jpg" id="p19">
+				<img src="images/Dino-Pieces_03.jpg" id="p3">
+				<img src="images/Dino-Pieces_13.jpg" id="p13">
+				<img src="images/Dino-Pieces_23.jpg" id="p23">
+			</div>
+			<div id="images4" class="row images column small-3 large-3">
+				<img src="images/Dino-Pieces_24.jpg" id="p24">
+				<img src="images/Dino-Pieces_11.jpg" id="p11">
+				<img src="images/Dino-Pieces_26.jpg" id="p26">
+				<img src="images/Dino-Pieces_05.jpg" id="p5">
+				<img src="images/Dino-Pieces_27.jpg" id="p27">
+				<img src="images/Dino-Pieces_08.jpg" id="p8">
+				<img src="images/Dino-Pieces_29.jpg" id="p29">
+				<img src="images/Dino-Pieces_16.jpg" id="p16">
+			</div>
+		</div>
+		<footer id="footer"> 
+			<div class="row"> <!-- Start of a new row, each row has a width of 960px  -->
+				<div class="column large-3"> <!-- New column which contains 7 columns on a large screen, 5 on a smaller screen. -->
+					<div class="footer-img"><img alt="National Museums Liverpool" src="images/logo-footer.png"></div>
+				</div> <!-- End of column. -->
+				<div class="column large-4"> <!-- New column set to large-4 to make up 12 in total. -->
+					<h4>Find us on</h4> <!-- H4 header. -->
+					 <!-- The following links (a) contain the links address (href), title(which display once hovered over), and the specific icon attached to the social media platform. -->
+					  <a href="https://www.facebook.com/worldmuseum" id="footer-icon" class="fa fa-facebook" title=""></a>
+					  <a href="https://twitter.com/world_museum" id="footer-icon2" class="fa fa-twitter" title=""></a>
+					  <a href="https://www.youtube.com/playlist?list=PLtd6KRb90Px2jyq1Xtz7xhKMU5NwNwQwG" id="footer-icon3" class="fa fa-youtube" title=""></a>
+					  <a href="https://www.instagram.com/worldmuseum_/" id="footer-icon5" class="fa fa-instagram" title=""></a>
+					  <a href="https://www.tripadvisor.co.uk/Attraction_Review-g186337-d215399-Reviews-World_Museum-Liverpool_Merseyside_England.html" id="footer-icon6" class="fa fa-tripadvisor" title="Read about the World Museum on Tripadvisor"></a>
+					  <!-- End of icon links. -->
+				</div> <!-- End of column. -->
+				<div class="column large-5"> <!-- New column set to large-4 to make up 12 in total. -->
+					<ul class="footer-nav">
+						<li><a href="http://www.liverpoolmuseums.org.uk/about/corporate/policies/data-protection-policy.aspx#cookies">Cookies and data protection  |</a></li>
+						<li><a href="http://www.liverpoolmuseums.org.uk/about/accessibility.aspx">Accessibility  |</a></li>
+						<li><a href="http://www.liverpoolmuseums.org.uk/about/contact/index.aspx">Contact us</a></li>
+					</ul>
+					<p>&copy; Copyright 2018</p>
+				</div>	  <!-- End of icon links. -->
+			</div> <!-- End of row. --> 
+		</footer> <!-- End of the footer. -->	
+	</body>
+</html>

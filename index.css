@@ -1,0 +1,427 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {font-family:"Soho";src: url(fonts/soho.otf);}
+
+@font-face {font-family:"Soho-B";src: url(fonts/soho-bold.otf);}
+
+@font-face {font-family:"Soho-EB";src: url(fonts/soho-extrabold.otf);}
+
+
+
+body {
+
+	background-color: #E8E8E8;
+	font-family: 'Soho';
+	padding-bottom: 20px;
+    border: 0;
+	font-size: 12px;
+	margin: 0 0 100px;	
+	height: 100%;
+}
+
+/*Styling for the top element in the page (return link)*/
+.topreturn {
+	margin-top: -15px;
+	background-color: black;
+	height: 40px;
+}
+
+.return li {
+	margin-left: 100px;
+}
+
+.return li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: 'Soho-B';
+	font-weight: 400;
+}
+/*End of the top page element*/
+
+/* Styling for the banner (second page element)*/
+.banner {
+	padding-left: 10%;
+	background-color: #5C9122;
+	background: linear-gradient(#5C9122, #4E7A1D);
+	padding-top: 0;
+	color: white;
+	height: 160px;
+}
+
+/*First museum logo*/
+.NML img {
+ 	height: 170px;
+	width:126px;
+	margin-left: -70px;	
+	margin-top: -45px;
+}
+/*Second museum logo*/
+.WM img{
+	padding-top: 30px;
+	margin-left: 10px;
+}
+/*Text inside the second page element*/
+.banner p {
+	font-size: 21px;
+	margin-left: 140px;
+	padding-top: 5px;
+	font-family: 'Soho';
+	line-height: 25px;
+	font-weight: 400;
+	
+}
+/*End of second page element styling*/
+
+/*Styling for the lower navigation menu, 3rd page element*/
+.lowerNav {
+	background-color: #293D0A;
+}
+.lowerNav ul {
+	background-color: #293D0A;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	
+}
+.lowerNav li {
+    float: left;
+	margin-left: -15px;
+	margin-right: -10px;
+}
+.lowerNav li a {
+    text-decoration: none;
+	display: block;
+    color: white;
+    padding: 14px 16px;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: 'Soho-B';
+	font-weight: 400;
+}
+.lowerNav li a:hover, .return li a:hover {
+	text-decoration: underline;
+}
+
+/*End of styling*/
+
+/*Styling for the welcome section of the page. This includes the H1 header and all form elements*/
+
+#welcome {
+	height:50vh;
+}
+
+.title1 {
+	margin-top: 5px;;
+	margin-bottom: 20px;
+	font-size: 5em;
+	text-align: center;
+/*	line-height: 20px;*/
+	font-family: 'Soho-EB';
+	font-weight: 400;
+	color: #273d0e;
+}
+
+/*Start of form styling*/
+#form {
+	display:inline;
+    margin: auto;
+	font-size: 1.3em;
+ 	color: black;
+    padding: 20px;
+	border: solid #293D0A;
+	background-color: white;
+
+}
+/* Styling specific for fieldset element, the forms container */
+fieldset {
+	color: #293D0A;
+	font-family: 'Soho';
+	font-size: 14px;
+}
+
+#label {
+	font-family: 'Soho-B';
+	font-size: 18px;
+}
+
+/* Styling specific for legend element, the forms title*/
+legend {
+	font-size: 1.5em;
+	text-align: center;
+	margin-bottom: 1em;
+	font-family: 'Soho';
+	color: #293D0A;
+}
+
+/* Styling specific for input elements inside the form*/
+/* Styling specific for the text input*/
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	box-shadow: inset 1px 1px 2px #293D0A;
+    transition: all 0.15s linear 0s;
+}
+.index-form {
+	font-family: 'Soho-B';
+	width: 49.5%;
+	background-color: #293D0A;
+	border: solid #293D0A;
+/*	font-weight: bold;*/
+	color:white;
+    padding: 10px 20px;
+    margin: 10px 0;
+/*  border-radius: 12px;*/
+    cursor: pointer;
+	font-size: 14px;
+	display: inline-block;
+}
+.index-form:hover {
+	background-color: white;
+	color: #293D0A;
+/*	font-weight: bold;*/
+}
+
+/*End of welcome styling*/
+
+
+/*Styling for the hidden instructions which displays once a enter(in the form) is pressed*/
+/* Styling specific for the instructions */
+#instructions{
+	margin-top: -20em;
+	text-align: center;
+	font-size: 18px;	
+	display: none;
+	font-family: 'Soho';
+/*	background-color: white;*/
+	
+} 
+#instructions p {
+	font-size: 2em;
+}
+.title2 {
+/*	margin-top: -10px;*/
+	margin-bottom: 20px;
+	color: #273d0e;
+	font-size: 1.8em;
+	text-align: center;
+	font-family: 'Soho-B';
+}
+
+/* Styling specific for the button at the bottom of the welcome messsage */
+
+#enter-button {
+	font-family: 'Soho-B';
+	width: 33.3%;
+	background-color: #293D0A;
+	font-weight: bold;
+	color:white;
+    padding: 10px 20px;
+    margin: 8px 0;
+/*    border-radius: 12px;*/
+    cursor: pointer;
+	font-size: 14px;
+	display: inline-block;
+	border: solid black;
+}
+#enter-button:hover {
+	background-color: white;
+	color: #293D0A;
+	font-weight: bold;
+}
+
+
+/*End of instructions*/
+
+
+/* Styling for the footer which appears across all three pages */
+footer {
+	margin: 0 auto;
+	background-color: black;
+	width: 100%;
+    bottom: 0;
+	font-size: 1.5em; /* Sets the font to 18px */
+	font-family: sans-serif;
+	margin-bottom: -150px;
+	margin-top: 50px;
+	color: white; /* Font colour */
+	overflow: hidden;
+	height: 200px;
+	
+}
+/* The links inside the footer */
+footer a {
+	color: white;
+}
+/* The link once hovered */
+footer a:hover {
+	text-decoration: none;
+}
+
+footer p {
+	float: right;
+	margin-top: -10px;
+	
+}
+
+footer ul {
+	padding-top: 10px;
+}
+	
+/* The following styling is for the icons inside the footer */
+.fa {
+    padding-top: 6px;
+    text-decoration: none;
+	font-size: 100%;	
+}
+
+#footer-icon, #footer-icon2, #footer-icon3,
+#footer-icon4,#footer-icon5,#footer-icon6 {
+	font-size: 30px;
+	background-color: white;
+	width: 40px;
+	height: 40px;
+	color: black;
+	text-align: center;
+	border-radius: 6px;
+}
+
+.footer-img {
+	padding-top: 50px;
+}
+
+.footer-nav li, p {
+	display: inline;
+	font-size: 0.8em;
+
+}
+
+.footer-nav li a {
+	margin-top: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Start of responsive screen styling */
+.row {
+width: 960px;
+max-width: 100%;
+margin: 0 auto;
+}
+.row:after {
+content: ' ';
+display:table;
+clear:both;
+}
+.column {
+float: left;
+box-sizing: border-box;
+}
+
+@media (min-width : 280px) and (max-width : 650px) {
+
+ .small-1 {
+	width: 8.333%
+}
+ .small-2 {
+	width: 16.666%
+}
+ .small-3 {
+	width: 25%
+}
+ .small-4 {
+	width: 33.333%
+}
+ .small-5 {
+	width: 41.666%
+}
+ .small-6 {
+	width: 50%
+}
+ .small-7 {
+	width: 58.333%
+}
+ .small-8 {
+	width: 66.666%
+}
+ .small-9 {
+	width: 75%
+}
+ .small-10 {
+	width: 83.333%
+}
+ .small-11 {
+	width: 91.666%
+}
+ .small-12 {
+	width: 100%
+}
+.small-hidden {
+	display: none;
+}
+}
+@media screen and (min-device-width: 43em) 
+{
+
+.column {
+	float:left;
+	box-sizing:border-box;
+}
+
+.large-1 {
+	width: 8.333%
+}
+ .large-2 {
+	width: 16.666%
+}
+ .large-3 {
+	width: 25%
+}
+ .large-4 {
+	width: 33.333%
+}
+ .large-5 {
+	width: 41.666%
+
+}
+ .large-6 {
+	width: 50%
+}
+ .large-7 {
+	width: 58.333%
+}
+ .large-8 {
+	width: 66.666%
+}
+ .large-9 {
+	width: 75%
+}
+ .large-10 {
+	width: 83.333%
+}
+ .large-11 {
+	width: 91.666%
+}
+ .large-12 {
+	width: 100%
+}
+.small-hidden {
+	display: block;
+}
+.large-hidden {
+	display: none;
+	}
+}
+
+

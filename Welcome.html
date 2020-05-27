@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="index.css" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Links this HTML file with CSS file imported. This allows the use of their icons in the footer. -->
+		<script src="scripts/jquery.min.js"></script>
+		<script src="scripts/index.js"></script>
+		<script src="scripts/parsley.min.js"></script>
+		<title>Welcome</title>
+	</head>
+	<body>
+		<div id="container1">
+			<!-- Top element in page. Simply returns the user back the liverpool museums-->
+			<div class="topreturn" id="topreturn">
+				<div class="row">
+					<ul class="return">
+						<li class="column large-12"><a href="http://www.liverpoolmuseums.org.uk/">Back to National Museums Liverpool</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Second element containing two NML logs, both as individual links -->
+			<div class="banner">
+				<div class="row">
+					<div class="NML column large-2"><a href="http://www.liverpoolmuseums.org.uk/"><img alt="National Museums Liverpool" src="images/logo-nml-white (1).png"></a></div>
+					<div class="WM column large-2"><a href="http://www.liverpoolmuseums.org.uk/wml/index.aspx"><img alt="National Museums Liverpool" src="images/logo-welcome.png"></a></div>
+					<p class="column large-5">Discover treasures from around the world, explore outer space and meet live creatures!</p>
+					<div class="column large-3">&nbsp;</div>
+				</div>
+			</div>
+			<!--Start of the navigation, third page element-->
+			<div class="lowerNav" id="menu">
+				<div class="row">
+					<ul class="menu-links">
+						<li><a href="http://www.liverpoolmuseums.org.uk/wml/visit/index.aspx">Your visit |</a></li>
+						<li><a href="http://www.liverpoolmuseums.org.uk/wml/events/">What's on |</a></li>
+						<li><a href="http://www.liverpoolmuseums.org.uk/wml/things-to-see/">Things to see |</a></li>
+						<li><a href="http://www.liverpoolmuseums.org.uk/wml/collections/index.aspx">Collections |</a></li>
+						<li><a href="http://www.liverpoolmuseums.org.uk/wml/schools-groups/index.aspx">Schools and groups |</a></li>
+						<li><a href="http://www.liverpoolmuseums.org.uk/onlineshop/venues/wml.aspx">Shop |</a></li>
+						<li><a href="http://www.liverpoolmuseums.org.uk/wml/contact/index.aspx">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="welcome">
+			<div class="title1"><p>Welcome To The World Museum Dinosaur Puzzle</p></div>
+			<div class="column large-2">&nbsp;</div>
+			<div id="form" class="column large-8"> <!-- New set to large-6 to make up 12 in total. This sets the content to display on the middle of the scren. -->
+				<form data-parsley-validate=""> <!-- New form to welcome each user to enter their names. -->
+					<fieldset> <!-- Contains the elements of the form. -->
+						<legend>Please Enter Your Name To Reveal The Instructions</legend> <!-- The text at the top of the form. -->
+						<label id="label">Name Here</label> <!-- New label asking the user for the their name. -->
+						<input  type="text" name="firstname" placeholder="Please enter your name.." id="first" required="Yes"> <!-- Text input which accepts text (users name). ID given for Javascript purpose. -->
+						<input class="index-form" id="index-form-enter" type="submit" value="Instructions" onclick="showInput();"> <!-- Submit input, acts like an enter button. onClick links this element to the Javascript further down. -->
+						<input class="index-form" type="button" name="button" id="index-form-skip" value="Skip" onclick="window.location.href='DinosaurPuzzle.html'"> 
+					</fieldset> <!-- End of fieldset. -->
+				</form> <!-- End of form. -->
+			</div> <!-- End of column. -->
+			<div class="column large-2">&nbsp;</div>
+		</div>
+		<div class="row"> <!-- New row. -->
+			<div id="instructions" class="column large-12 small-12">
+				<div class="title2"><p id="display"></p></div>
+				<div class="welcome-message"><p>You must put all of the Dinosaur bones together to complete the puzzle, then watch the dinosaur come to life. Don't forget to read the 'Did you know' facts and learn as you play</p></div>
+				<br>
+				<form action="DinosaurPuzzle.html"> 
+					<button id="enter-button">Click To Play</button> 
+				</form> 
+			</div> 
+		</div>
+		<footer id="footer"> 
+			<div class="row"> <!-- Start of a new row, each row has a width of 960px  -->
+				<div class="column large-3"> <!-- New column which contains 7 columns on a large screen, 5 on a smaller screen. -->
+					<div class="footer-img"><img alt="National Museums Liverpool" src="images/logo-footer.png"></div>
+				</div> <!-- End of column. -->
+				<div class="column large-4"> <!-- New column set to large-4 to make up 12 in total. -->
+					<h4>Find us on</h4> <!-- H4 header. -->
+					 <!-- The following links (a) contain the links address (href), title(which display once hovered over), and the specific icon attached to the social media platform. -->
+					  <a href="https://www.facebook.com/worldmuseum" id="footer-icon" class="fa fa-facebook" title=""></a>
+					  <a href="https://twitter.com/world_museum" id="footer-icon2" class="fa fa-twitter" title=""></a>
+					  <a href="https://www.youtube.com/playlist?list=PLtd6KRb90Px2jyq1Xtz7xhKMU5NwNwQwG" id="footer-icon3" class="fa fa-youtube" title=""></a>
+					  <a href="https://www.instagram.com/worldmuseum_/" id="footer-icon5" class="fa fa-instagram" title=""></a>
+					  <a href="https://www.tripadvisor.co.uk/Attraction_Review-g186337-d215399-Reviews-World_Museum-Liverpool_Merseyside_England.html" id="footer-icon6" class="fa fa-tripadvisor" title="Read about the World Museum on Tripadvisor"></a>
+					  <!-- End of icon links. -->
+				</div> <!-- End of column. -->
+				<div class="column large-5"> <!-- New column set to large-4 to make up 12 in total. -->
+					<ul class="footer-nav">
+						<li><a href="http://www.liverpoolmuseums.org.uk/about/corporate/policies/data-protection-policy.aspx#cookies">Cookies and data protection  |</a></li>
+						<li><a href="http://www.liverpoolmuseums.org.uk/about/accessibility.aspx">Accessibility  |</a></li>
+						<li><a href="http://www.liverpoolmuseums.org.uk/about/contact/index.aspx">Contact us</a></li>
+					</ul>
+					<p>&copy; Copyright 2018</p>
+				</div>	  <!-- End of icon links. -->
+			</div> <!-- End of row. --> 
+		</footer> <!-- End of the footer. -->
+	</body>
+</html>
